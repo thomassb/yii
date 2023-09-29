@@ -207,7 +207,6 @@ class CMysqlSchema extends CDbSchema
 		$c->autoIncrement=strpos(strtolower(isset($column['Extra'])?$column['Extra']:''),'auto_increment')!==false;
 		if(isset($column['Comment']))
 			$c->comment=$column['Comment'];
-
 		return $c;
 	}
 
